@@ -12,6 +12,11 @@ struct ContentView: View {
         VStack {
             VStack {
                 Text("🎯🎯🎯\nPUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
+                    .kerning(2.0)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(4.0)
+                    .font(.footnote)
                 Text("86")
             }
             HStack {
