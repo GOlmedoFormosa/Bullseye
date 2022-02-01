@@ -1,6 +1,6 @@
 # SwiftUI
 
-This project is a game in which I'm working to earn some experience with SwiftUI and remember some knowledge about Swift.
+This project is a game in which I'm working to earn some experience with SwiftUI and remember some concepts of Swift.
 
 ## SwiftUI vs UIKit
 
