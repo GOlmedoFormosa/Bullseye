@@ -28,14 +28,14 @@ You can think as a view like everything that gets drawn on the screen (Texts, Bu
 
 ## Test
 
-a. Create new XCode project.
-b. Choose template IOS -> App and Next.
-c. Product name: Bullseye. Team -> default. Organization identifier -> com.name. Everything else default.
-The main view of our app by default is called Content.View
-d. We will have to press "resume" on the right to see the visualizer.
-e. Update the text name with "PUT THE BULLSEYE AS CLOSE AS YOU CAN TO" and delete the padding.
-f. If you hit control+command+space. "emojiemojiemoji\nPUT THE BULLSEYE AS CLOSE AS YOU CAN TO"
-g. In order to add a new view press the + button in the top right. If you select a View and you hover over the line below our existing Text View we will see a blue line, so if we drop the new View there, we will add the Text View inside our VStack view.
+- Create new XCode project.
+- Choose template IOS -> App and Next.
+- Product name: Bullseye. Team -> default. Organization identifier -> com.name. Everything else default.
+  The main view of our app by default is called Content.View
+- We will have to press "resume" on the right to see the visualizer.
+- Update the text name with "PUT THE BULLSEYE AS CLOSE AS YOU CAN TO" and delete the padding.
+- If you hit control+command+space. "emojiemojiemoji\nPUT THE BULLSEYE AS CLOSE AS YOU CAN TO"
+- In order to add a new view press the + button in the top right. If you select a View and you hover over the line below our existing Text View we will see a blue line, so if we drop the new View there, we will add the Text View inside our VStack view.
 
 ## Modify SwiftUI Modifiers
 
@@ -117,6 +117,6 @@ SwiftUI was designed to solve the problem of the mismach between your user inter
   Slider(value: self.$sliderValue, in: 1.0...100.0)
 ```
 
-## String
+## Strings
 
 To create a string in Swift you simply surround some text by some quotes. Now behind the scenes, strings are just a sequence of characters. String in swift have a feature called interpolation "Hello, \(name)!" this is kind of a placeholder that is replaced dynamically by code when the app runs.
