@@ -105,3 +105,18 @@ We declare a state using @State and whenever this changes SwiftUI will compute t
     Text("Hit me")
   }
 ```
+
+## SwiftUI Bindings
+
+SwiftUI was designed to solve the problem of the mismach between your user interface and your application state. And one of the ways that SwiftUI provides to help with this is something called bindings. Bindings are a fancy way of saying that a particular user interface view will always be tied to a particular state value. The way you convert a state variable to a binding is using the dolar sign. Example:
+
+```
+  @State private var sliderValue: Double = 50.0
+  ...
+  ...
+  Slider(value: self.$sliderValue, in: 1.0...100.0)
+```
+
+## String
+
+To create a string in Swift you simply surround some text by some quotes. Now behind the scenes, strings are just a sequence of characters. String in swift have a feature called interpolation "Hello, \(name)!" this is kind of a placeholder that is replaced dynamically by code when the app runs.
