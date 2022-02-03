@@ -120,3 +120,30 @@ SwiftUI was designed to solve the problem of the mismach between your user inter
 ## Strings
 
 To create a string in Swift you simply surround some text by some quotes. Now behind the scenes, strings are just a sequence of characters. String in swift have a feature called interpolation "Hello, \(name)!" this is kind of a placeholder that is replaced dynamically by code when the app runs.
+
+## Variables
+
+A variable allows your app to remember things, you can think about that as a temporary storage container for a single piece of data. You don't just put stuff in the container and then forget about it. You'll often replace this contents with a new value later on, that's the whole point behand variables, they can vary. This is the syntax to create a variable in Swift.
+
+```
+  @State private var variableName: Type = InitalValue
+```
+
+If this variable is a property on a class or struct, you can optionally put private, and that will mark it as private only accesible by the particular class or struct. We use the keyword 'var' to create a variable that we can change, I mean it can vary, on the contrast, if that variable won't change we can use the keyword 'let'. Types:
+
+1. Bool, which is a varialble that can be true or false.
+2. Double, numbers with decimal values, we use a dot to separate integers from decimals.
+3. Int, integers.
+4. Float.
+5. String, is a collection of characters, we declare it with quotes.
+
+So you may think how can we convert one type to another, like for example a Float to Integer. It turns out that you can create another Int given a double value, that process is called casting, and we can do it with the following:
+
+```
+  var x: Float = 3.14
+  var y: Int = x // error
+  var y: Int = Int(x)
+```
+
+We said that a variable is a temporary storage container, but how long will store its contents? Well, each variable has a certain lifetime, that depends on exactly where in your program you define that variable. In the case of the Slider, the value will stick around for just as long as its owner content view does. Their fates are intertwined. The ContentView and the Slider value are there for the duration of the app. They don't get destroyed until the app quits. There also variables that are short-lived variables known as local variables.
+The concept of how long variable lives, is often called scopes.
