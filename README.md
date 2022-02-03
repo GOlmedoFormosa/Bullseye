@@ -147,3 +147,16 @@ So you may think how can we convert one type to another, like for example a Floa
 
 We said that a variable is a temporary storage container, but how long will store its contents? Well, each variable has a certain lifetime, that depends on exactly where in your program you define that variable. In the case of the Slider, the value will stick around for just as long as its owner content view does. Their fates are intertwined. The ContentView and the Slider value are there for the duration of the app. They don't get destroyed until the app quits. There also variables that are short-lived variables known as local variables.
 The concept of how long variable lives, is often called scopes.
+
+## App Architecture
+
+The ContentView job is to display the user interface for the app. Asking ContentView to worry about the gameplay logic in addition, would be violating our single responsability principle, because it would have more than one job. We want our classes and structs to be lazy, so instead it will be better to create a new struct that handles all of the gameplay logic and we can call it Game. Objects like this new game class or struct that are responsible for you app's data are commonly called model classes. When you're thinking about app architecture, you also need to to think about how these objects are connected, how they can communicate. In this case, we want our view classes to have an instance of the game model as property. The view classes can then communicate with the model classes whenever they need to interact with the app's data. We don't want the view to call methos on, or even know about the views. This makes the model classes more independent and therefore more reusable and more testeable.
+
+## Creating a method in Swift
+
+```
+  func yourMethodName(parameterName: ParameterType) -> ReturnType {
+    // Your code here!
+    return yourReturnValue
+  }
+```
