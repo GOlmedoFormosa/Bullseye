@@ -210,3 +210,8 @@ This special built-in functions are called Asserts, and these are function you c
 2. XCTAssertEqual
 3. XCTAssertGreaterThan
 4. ...and many more.
+
+We can run tests in different ways:
+
+1. Go to Product -> Test (command+U), this will run the app and all tests.
+2. Another way is to click the checkmarks and then you will run an specific test or a group of tests.
