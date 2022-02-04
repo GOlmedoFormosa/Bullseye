@@ -164,3 +164,49 @@ The ContentView job is to display the user interface for the app. Asking Content
 ## Swift Standard Library
 
 The swift language comes with many pre-built data type and functions you can use any of your own apps to solve a variety of common programming tasks called the Swift Standard Library. The data types int, double, string and bool are all part of the Swift Standard Library. The print method that you use to print a message is also a part of the Swift Standard Library. XCode has its own detailed developer documentation, that includes every single class or method that you can use in IOS including everything in the Swift Standard Library. Press shift+comand+0 to open de documentation.
+
+## Unit Testing
+
+Unit testing is when you write coe to test your other code. The nice thing about testing is that you can write it once, and then you can use them forever. XCode makes unit testing super easy with nice built-in support.
+
+```
+  class YourTestCaseName: XCTestCase {
+  }
+```
+
+Each test needs to provide a setup and a tear down method. The setup method does everything you need to do to get rid for your other tests.
+
+```
+  class YourTestCaseName: XCTestCase {
+    override func setUpWithError() throws {
+      // your code here
+    }
+
+    override func tearDownWithError() throws {
+      // your code here
+    }
+  }
+```
+
+Finally you add a method into your test case for every test that you want to run. You can put any code you want into these tests, but at some point you should call some special built-in functions that apple provided to test whether what actually happened matches what you expect to happen.
+
+```
+  class YourTestCaseName: XCTestCase {
+    override func setUpWithError() throws {
+      // your code here
+    }
+    override func tearDownWithError() throws {
+      // your code here
+    }
+    func yourTestName() throws {
+      // your code here
+    }
+  }
+```
+
+This special built-in functions are called Asserts, and these are function you can call a test if something you expect to work in a certain way actually doesn't practice. There are manny types of asserts
+
+1. XCTAssertTrue
+2. XCTAssertEqual
+3. XCTAssertGreaterThan
+4. ...and many more.
