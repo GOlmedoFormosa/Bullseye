@@ -215,3 +215,7 @@ We can run tests in different ways:
 
 1. Go to Product -> Test (command+U), this will run the app and all tests.
 2. Another way is to click the checkmarks and then you will run an specific test or a group of tests.
+
+## Test-Driven Development
+
+The basic idea of test-driven development is that rather than writing the test after you write your code, you write your test first. Obviously, at first your test will fail because you haven't actually written the code yet. But then when you write your code, you have some more confidence that it works exactly the way that you intended it to. One of the nice things about test-driven development is that it forces you tu put some thought upfront about how you want your code to work before you write the code. It's also a great way to ensure that you definitely take the time to write tests for all your code, instead of forgetting to test some parts.
